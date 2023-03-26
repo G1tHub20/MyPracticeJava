@@ -14,17 +14,22 @@ public class Main {
 	public static void main(String[] args) {
 
 		List<Dantai_tougou_info> infoList = new ArrayList<>();
-		
+
 		try {
 			infoList = getInfo();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
+		int i = 1;
 		for (Dantai_tougou_info row:infoList) {
-			System.out.println(row.getDantaiIdNew());
-			System.out.println(row.getDantaiIdOld());
-			System.out.println(row.getResisterDate());
+			String getDantaiIdNew = row.getDantaiIdNew();
+			String getDantaiIdOld = row.getDantaiIdOld();
+			Date resisterDate = row.getResisterDate();
+
+			System.out.println(i + "件目");
+			System.out.println("(" + getDantaiIdOld + ", " + getDantaiIdNew + ", " + resisterDate + ")");
+			i++;
 		}
 	}
 
