@@ -1,0 +1,9 @@
+<hero>
+	<name>ミナト</name>
+	<hp>75</hp>
+	<mp>18</mp>
+	<weapon>
+		<name>鋼の剣</name>
+		<power>鋼の剣</power>
+	</weapon>
+</hero>
